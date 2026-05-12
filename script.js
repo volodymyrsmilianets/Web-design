@@ -6,27 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const planGrid = document.getElementById('my-plan-grid');
     const regForm = document.getElementById('regForm');
 
-    // 1. ФУНКЦІЯ ВАЛІДАЦІЇ ТА ЗБЕРЕЖЕННЯ (ПР №1)
     regForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Перевірка на валідність усіх полів (email, minlength тощо)
         if (!regForm.checkValidity()) {
-            // Додаємо ефект трусіння форми при помилці
             regForm.classList.add('shake-anim');
             setTimeout(() => regForm.classList.remove('shake-anim'), 500);
             return;
         }
 
-        // Якщо все ок — збираємо дані
         const formData = new FormData(regForm);
         const userName = formData.get('name');
 
         alert(`Профіль для ${userName} успішно створено! Пошта валідна.`);
-        regForm.reset(); // Очищуємо форму
+        regForm.reset();
     });
 
-    // 2. ФЕТЧ ТА РЕНДЕР (ПР №4)
     async function getExercises() {
         try {
             const response = await fetch('data.json');
@@ -50,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
     }
 
-    // 3. ФІЛЬТРАЦІЯ НА ГОЛОВНІЙ (Твій запит)
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -65,14 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. ДОДАВАННЯ В ПЛАН З АНІМАЦІЄЮ (ПР №3)
     window.addToPlan = (event, id) => {
         const btn = event.currentTarget;
         const exercise = allExercises.find(e => e.id === id);
 
         if (userPlan.some(e => e.id === id)) return alert("Вправа вже в плані!");
 
-        // Анімація кнопки
         btn.classList.add('clicked');
         btn.textContent = "Додано! ✓";
         setTimeout(() => {
@@ -105,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // SPA НАВІГАЦІЯ
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
