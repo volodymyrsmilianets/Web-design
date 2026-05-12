@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Класичні присідання",
+        "type": "силова",
+        "desc": "Найкраща вправа для зміцнення ніг та сідниць.",
+        "image": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamw4NXQyemc3YXB2dGF6MGx6aG42dHUyaGM3aGgwM3lzc3o5d3R3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13v55Ya4uWsXS/giphy.gif"
+    },
+    {
+        "id": 2,
+        "name": "Біг на місці",
+        "type": "кардіо",
+        "desc": "Високе піднімання колін для витривалості та кардіо.",
+        "image": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2w2YXUzNGVsZ2t3OW1hdWltdTdmdWw5d3plZnBkcDRubHQwNzA4NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iQ6bednTN3p0BUdLl2/giphy.gif"
+    },
+    {
+        "id": 3,
+        "name": "Віджимання",
+        "type": "силова",
+        "desc": "Класична вправа для м'язів грудей та рук.",
+        "image": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXp6Zmd6MjUxNXhqamM5a295aHQ0bWl1dDV5bThrdjR5cHp1N3EzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohze1qkqPZHMrEuwo/giphy.gif"
+    },
+    {
+        "id": 4,
+        "name": "Планка",
+        "type": "силова",
+        "desc": "Статична вправа для зміцнення м'язів кору.",
+        "image": "https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=400"
+    }
+]
